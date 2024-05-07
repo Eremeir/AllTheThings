@@ -1,0 +1,30 @@
+-- Database
+-- #IMPORT: 00 - DB\\AchievementDB - Cataclysm.lua
+-- #IMPORT: 00 - DB\\CategoryDB.lua
+-- #IMPORT: 00 - DB\\ClassInfoDB.lua
+-- #IMPORT: 00 - DB\\FilterDB.lua
+-- #IMPORT: 00 - DB\\FlightPathDB.lua
+-- #IMPORT: 00 - DB\\FlightPathDB_Conditionals.lua
+-- #IMPORT: 00 - DB\\IllusionDB.lua
+-- #IMPORT: 00 - DB\\InstanceDB.lua
+-- #IMPORT: 00 - DB\\ItemDB.lua
+-- #IMPORT: 00 - DB\\MountDB.lua
+-- #IMPORT: 00 - DB\\ObjectDB.lua
+-- #IMPORT: 00 - DB\\ObjectDB_Conditionals.lua
+-- #IMPORT: 00 - DB\\PetDB.lua
+-- #IMPORT: 00 - DB\\PetTypeDB.lua
+-- #IMPORT: 00 - DB\\ToyDB.lua
+-- #IMPORT: 00 - DB\\Dynamic\\
+-- #IMPORT: 00 - Item DB\\Build NYI.lua
+-- #IMPORT: 00 - Item DB\\BindOnAccountItems.lua
+-- #IMPORT: 00 - Item DB\\Blueprints.lua
+-- #IMPORT: 00 - Item DB\\CharacterItemDB.lua
+-- #IMPORT: 00 - Item DB\\Conduits.lua
+-- #IMPORT: 00 - Item DB\\Garrison Buildings.lua
+-- #IMPORT: 00 - Item DB\\Grand Commendations.lua
+-- #IMPORT: 00 - Item DB\\Item Filters for RWP.lua
+-- #IMPORT: 00 - Item DB\\MusicRolls.lua
+-- #IMPORT: 00 - Item DB\\RuneforgePowers.lua
+-- --IMPORT: 00 - Item DB\\Source IDs\\	-- DISABLED, using Cataclysm SourceIDs file instead!
+-- #IMPORT: 00 - Item DB\\Uncollectible.lua
+-- #IMPORT: 00 - Profession DB\\

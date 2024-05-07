@@ -1,0 +1,580 @@
+---------------------------------------------------
+--          Z O N E S        M O D U L E         --
+---------------------------------------------------
+root(ROOTS.Zones, m(EASTERN_KINGDOMS, bubbleDown({ ["timeline"] = { ADDED_4_0_3_LAUNCH } }, {
+	m(245, {	-- Tol Barad Peninsula
+		["description"] = "Tol Barad Peninsula is the northernmost region of the island of Tol Barad and is a major daily quest hub in World of Warcraft: Cataclysm.",
+		["icon"] = 409548,	-- achievement_zone_tolbarad
+		["groups"] = {
+			n(ACHIEVEMENTS, {	-- non-pvp map
+				achWithRep(5375, 1177, {	-- Baradin's Wardens
+					["races"] = ALLIANCE_ONLY,
+				}),
+				ach(4874),	-- Breaking Out of Tol Barad
+				achWithRep(5376, 1178, {	-- Hellscream's Reach
+					["races"] = HORDE_ONLY,
+				}),
+				a(ach(5718, {	-- Just Another Day in Tol Barad (A)
+					["sym"] = {{ "achievement_criteria" }},
+				})),
+				h(ach(5719, {	-- Just Another Day in Tol Barad (H)
+					["sym"] = {{ "achievement_criteria" }},
+				})),
+			}),
+			petbattle(filter(BATTLE_PETS, {
+				["sym"] = {{"select","speciesID",
+					410, -- Wharf Rat (PET!)
+				}},
+			})),
+			n(FACTIONS, {
+				faction(1177, {	-- Baradin's Wardens
+					["races"] = ALLIANCE_ONLY,
+				}),
+				faction(1178, {	-- Hellscream's Reach
+					["races"] = HORDE_ONLY,
+				}),
+			}),
+			-- Daily Quests
+			n(QUESTS, sharedData({
+				["isDaily"] = true,
+			},{
+				q(27948, {	-- A Sticky Task [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28684, {	-- A Sticky Task [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(28275, {	-- Bombs Away! [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28696, {	-- Bombs Away! [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27972, {	-- Boosting Morale [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28680, {	-- Boosting Morale [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27987, {	-- Cannonball! [A]
+					["timeline"] = { ADDED_4_0_1 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28698, {	-- Cannonball! [H]
+					["timeline"] = { ADDED_4_0_1 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27970, {	-- Captain P. Harris [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28678, {	-- Captain P. Harris [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(28059, {	-- Claiming The Keep [A]
+					["timeline"] = { ADDED_4_0_1 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28682, {	-- Claiming The Keep [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(28046, {	-- Finish The Job [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28693, {	-- Finish The Job [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27967, {	-- First Lieutenant Connor [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28691, {	-- First Lieutenant Connor [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27978, {	-- Ghostbuster [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28697, {	-- Ghostbuster [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(28063, {	-- Leave No Weapon Behind [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28685, {	-- Leave No Weapon Behind [H]
+					["timeline"] = { ADDED_4_0_1 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27992, {	-- Magnets, How Do They Work? [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28692, {	-- Magnets, How Do They Work? [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(28130, {	-- Not The Friendliest Town [A]
+					["timeline"] = { ADDED_4_0_1 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28686, {	-- Not The Friendliest Town [H]
+					["timeline"] = { ADDED_4_0_1 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27971, {	-- Rattling Their Cages [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28679, {	-- Rattling Their Cages [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27966, {	-- Salvaging the Remains [A]
+					["timeline"] = { ADDED_4_0_1 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28690, {	-- Salvaging the Remains [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(28050, {	-- Shark Tank [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28681, {	-- Shark Tank [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27991, {	-- Taking the Overlook Back [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28700, {	-- Taking the Overlook Back [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(28137, {	-- Teach A Man To Fish.... Or Steal [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28687, {	-- Teach A Man To Fish.... Or Steal [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27949, {	-- The Forgotten [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28689, {	-- The Forgotten [H]
+					["timeline"] = { ADDED_4_0_1 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27944, {	-- Thinning the Brood [A]
+					["timeline"] = { ADDED_4_0_1 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28683, {	-- Thinning the Brood [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27975, {	-- WANTED: Foreman Wellson [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28695, {	-- WANTED: Foreman Wellson [H]
+					["timeline"] = { ADDED_4_0_1 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(28065, {	-- Walk A Mile In Their Shoes [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28721, {	-- Walk A Mile In Their Shoes [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27973, {	-- Watch Out For Splinters! [A]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28694, {	-- Watch Out For Splinters! [H]
+					["timeline"] = { ADDED_4_0_3 },
+					["races"] = HORDE_ONLY,
+				}),
+			})),
+			n(PROFESSIONS, {
+				prof(FISHING, {
+					i(22739, {	-- Tome of Polymorph: Turtle (CI!)
+						["providers"] = {
+							{ "o", 202780 },	-- Fathom Eel Swarm
+							{ "o", 207724 },	-- Shipwreck Debris
+						},
+					}),
+				}),
+				prof(MINING, {
+					i(67282),	-- Elementium Geode (PET!)
+				}),
+			}),
+			n(REWARDS, {
+				["description"] = "These are rewarded by completing the daily quests.",
+				["groups"] = {
+					currency(391),	-- Tol Barad Commendation
+				},
+			}),
+			n(VENDORS, {
+				n(48531, {	-- Pogg <Hellscream's Reach Quartermaster>
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(65176, {	-- Baradin Grunt's Talisman
+							["cost"] = { { "c", 391, 40 }, },	-- 40x Tol Barad Commendation
+						}),
+						i(62454, {	-- Blade of the Fearless
+							["cost"] = { { "c", 391, 85 }, },	-- 85x Tol Barad Commendation
+						}),
+						i(62456, {	-- Dagger of Restless Nights
+							["cost"] = { { "c", 391, 85 }, },	-- 85x Tol Barad Commendation
+						}),
+						i(68740, {	-- Darkheart Hacker
+							["cost"] = { { "c", 391, 85 }, },	-- 85x Tol Barad Commendation
+						}),
+						i(90898, {	-- Fox Kit (PET!)
+							["cost"] = { { "c", 391, 200 }, },	-- 200x Tol Barad Commendation
+						}),
+						i(68774, {	-- Greater Inscription of Vicious Agility
+							["cost"] = { { "c", 391, 80 }, },	-- 80x Tol Barad Commendation
+						}),
+						i(68772, {	-- Greater Inscription of Vicious Intellect
+							["cost"] = { { "c", 391, 80 }, },	-- 80x Tol Barad Commendation
+						}),
+						i(68773, {	-- Greater Inscription of Vicious Strength
+							["cost"] = { { "c", 391, 80 }, },	-- 80x Tol Barad Commendation
+						}),
+						i(63518, {	-- Hellscream's Reach Commendation
+							["races"] = HORDE_ONLY,
+							["cost"] = { { "c", 391, 10 }, },	-- 10x Tol Barad Commendation
+						}),
+						i(63378, {	-- Hellscream's Reach Tabard
+							["cost"] = { { "c", 391, 40 }, },	-- 40x Tol Barad Commendation
+						}),
+						i(62464, {	-- Impatience of Youth
+							["cost"] = { { "c", 391, 125 }, },	-- 125x Tol Barad Commendation
+						}),
+						i(62458, {	-- Insidious Staff
+							["cost"] = { { "c", 391, 85 }, },	-- 85x Tol Barad Commendation
+						}),
+						i(62467, {	-- Mandala of Stirring Patterns
+							["cost"] = { { "c", 391, 125 }, },	-- 125x Tol Barad Commendation
+						}),
+						i(62466, {	-- Mirror of Broken Images
+							["cost"] = { { "c", 391, 125 }, },	-- 125x Tol Barad Commendation
+						}),
+						i(62457, {	-- Ravening Slicer
+							["cost"] = { { "c", 391, 85 }, },	-- 85x Tol Barad Commendation
+						}),
+						i(65356, {	-- Drake of the West Wind (H) (MOUNT!)
+							["cost"] = { { "c", 391, 200 }, },	-- 200x Tol Barad Commendation
+						}),
+						i(64999, {	-- Spectral Wolf (MOUNT!)
+							["cost"] = { { "c", 391, 165 }, },	-- 165x Tol Barad Commendation
+						}),
+						i(64996, {	-- Rustberg Gull (PET!)
+							["cost"] = { { "c", 391, 50 }, },	-- 50x Tol Barad Commendation
+						}),
+						i(62459, {	-- Shimmering Morningstar
+							["cost"] = { { "c", 391, 85 }, },	-- 85x Tol Barad Commendation
+						}),
+						i(62460, {	-- Sky Piercer
+							["cost"] = { { "c", 391, 85 }, },	-- 85x Tol Barad Commendation
+						}),
+						i(62455, {	-- Spear of Trailing Shadows
+							["cost"] = { { "c", 391, 85 }, },	-- 85x Tol Barad Commendation
+						}),
+						i(62465, {	-- Stump of Time
+							["cost"] = { { "c", 391, 125 }, },	-- 125x Tol Barad Commendation
+						}),
+						i(64997, {	-- Tol Barad Searchlight (TOY!)
+							["cost"] = { { "c", 391, 40 }, },	-- 40x Tol Barad Commendation
+						}),
+						i(62463, {	-- Unsolvable Riddle
+							["cost"] = { { "c", 391, 125 }, },	-- 125x Tol Barad Commendation
+						}),
+					},
+				}),
+				n(47328, {	-- Quartermaster Brazie <Baradin's Wardens Quartermaster>
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(65175, {	-- Baradin Footman's Tags
+							["cost"] = { { "c", 391, 40 }, },	-- 40x Tol Barad Commendation
+						}),
+						i(63517, {	-- Baradin's Wardens Commendation
+							["races"] = ALLIANCE_ONLY,
+							["cost"] = { { "c", 391, 10 }, },	-- 10x Tol Barad Commendation
+						}),
+						i(63379, {	-- Baradin's Warden's Tabard
+							["cost"] = { { "c", 391, 40 }, },	-- 40x Tol Barad Commendation
+						}),
+						i(62473, {	-- Blade of the Fearless
+							["cost"] = { { "c", 391, 85 }, },	-- 85x Tol Barad Commendation
+						}),
+						i(62475, {	-- Dagger of Restless Nights
+							["cost"] = { { "c", 391, 85 }, },	-- 85x Tol Barad Commendation
+						}),
+						i(68739, {	-- Darkheart Hacker
+							["cost"] = { { "c", 391, 85 }, },	-- 85x Tol Barad Commendation
+						}),
+						i(90897, {	-- Fox Kit (PET!)
+							["cost"] = { { "c", 391, 200 }, },	-- 200x Tol Barad Commendation
+						}),
+						i(68774, {	-- Greater Inscription of Vicious Agility
+							["cost"] = { { "c", 391, 80 }, },	-- 80x Tol Barad Commendation
+						}),
+						i(68772, {	-- Greater Inscription of Vicious Intellect
+							["cost"] = { { "c", 391, 80 }, },	-- 80x Tol Barad Commendation
+						}),
+						i(68773, {	-- Greater Inscription of Vicious Strength
+							["cost"] = { { "c", 391, 80 }, },	-- 80x Tol Barad Commendation
+						}),
+						i(62469, {	-- Impatience of Youth
+							["cost"] = { { "c", 391, 125 }, },	-- 125x Tol Barad Commendation
+						}),
+						i(62477, {	-- Insidious Staff
+							["cost"] = { { "c", 391, 85 }, },	-- 85x Tol Barad Commendation
+						}),
+						i(62472, {	-- Mandala of Stirring Patterns
+							["cost"] = { { "c", 391, 125 }, },	-- 125x Tol Barad Commendation
+						}),
+						i(62471, {	-- Mirror of Broken Images
+							["cost"] = { { "c", 391, 125 }, },	-- 125x Tol Barad Commendation
+						}),
+						i(62476, {	-- Ravening Slicer
+							["cost"] = { { "c", 391, 85 }, },	-- 85x Tol Barad Commendation
+						}),
+						i(63039, {	-- Drake of the West Wind (A) (MOUNT!)
+							["cost"] = { { "c", 391, 200 }, },	-- 200x Tol Barad Commendation
+						}),
+						i(64998, {	-- Spectral Steed (MOUNT!)
+							["cost"] = { { "c", 391, 165 }, },	-- 165x Tol Barad Commendation
+						}),
+						i(63355, {	-- Rustberg Gull (PET!)
+							["cost"] = { { "c", 391, 50 }, },	-- 50x Tol Barad Commendation
+						}),
+						i(62478, {	-- Shimmering Morningstar
+							["cost"] = { { "c", 391, 85 }, },	-- 85x Tol Barad Commendation
+						}),
+						i(62479, {	-- Sky Piercer
+							["cost"] = { { "c", 391, 85 }, },	-- 85x Tol Barad Commendation
+						}),
+						i(62474, {	-- Spear of Trailing Shadows
+							["cost"] = { { "c", 391, 85 }, },	-- 85x Tol Barad Commendation
+						}),
+						i(62470, {	-- Stump of Time
+							["cost"] = { { "c", 391, 125 }, },	-- 125x Tol Barad Commendation
+						}),
+						i(63141, {	-- Tol Barad Searchlight (TOY!)
+							["cost"] = { { "c", 391, 40 }, },	-- 40x Tol Barad Commendation
+						}),
+						i(62468, {	-- Unsolvable Riddle
+							["cost"] = { { "c", 391, 125 }, },	-- 125x Tol Barad Commendation
+						}),
+					},
+				}),
+			}),
+			n(ZONE_DROPS, {
+				i(64403, {  -- Fox Kit (PET!)
+					["crs"] = { 47676 },	-- Baradin Fox
+				}),
+			}),
+			m(244, {	-- Tol Barad
+				["description"] = "Tol Barad is a world PvP zone very similar to Wintergrasp. A battle starts on even intervals of time, and the winner of the match gains access to the Baradin Hold raid, as well as a number of special daily quests that grant reputation and currency. In addition to this, both winner and loser gain access to the standard quests in the zone.",
+				["icon"] = "Interface\\Icons\\achievement_bg_winwsg",
+				["groups"] = {
+					pvp(n(ACHIEVEMENTS, {	-- pvp map
+						a(ach(5489,	{ -- Master of Tol Barad (A)
+							["sym"] = {{"meta_achievement",
+								5417,	-- Tol Barad Veteran
+								5415,	-- Tower Plower
+								5488,	-- Towers of Power
+								5487,	-- Tol Barad Saboteur
+								5486,	-- Tol Barad All-Star
+								5416,	-- Pit Lord Argaloth
+							}},
+						})),
+						h(ach(5490,	{ -- Master of Tol Barad (H)
+							["sym"] = {{"meta_achievement",
+								5418,	-- Tol Barad Veteran
+								5415,	-- Tower Plower
+								5488,	-- Towers of Power
+								5487,	-- Tol Barad Saboteur
+								5486,	-- Tol Barad All-Star
+								5416,	-- Pit Lord Argaloth
+							}},
+						})),
+						ach(5486),	-- Tol Barad All-Star
+						ach(5487),	-- Tol Barad Saboteur
+						a(ach(5417)),	-- Tol Barad Veteran
+						h(ach(5418)), -- Tol Barad Veteran
+						ach(5412),	-- Tol Barad Victory
+						ach(5488),	-- Towers of Power
+						ach(5415),	-- Tower Plower
+					})),
+					pvp(n(QUESTS, {
+						q(28122, {	-- A Huge Problem [A]
+							["timeline"] = { ADDED_4_0_1 },
+							["races"] = ALLIANCE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28657, {	-- A Huge Problem [H]
+							["timeline"] = { ADDED_4_0_3 },
+							["races"] = HORDE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28117, {	-- Clearing the Depths [A]
+							["timeline"] = { ADDED_4_0_1 },
+							["races"] = ALLIANCE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28660, {	-- Clearing the Depths [H]
+							["timeline"] = { ADDED_4_0_3 },
+							["races"] = HORDE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28665, {	-- Cursed Shackles [H]
+							["timeline"] = { ADDED_8_0_1 },
+							["races"] = HORDE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28186, {	-- Cursed Shackles [A]
+							["timeline"] = { ADDED_4_0_1 },
+							["races"] = ALLIANCE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28165, {	-- D-Block [A]
+							["timeline"] = { ADDED_4_0_1 },
+							["races"] = ALLIANCE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28663, {	-- D-Block [H]
+							["timeline"] = { ADDED_4_0_3 },
+							["races"] = HORDE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28670, {	-- Food From Below [H]
+							["timeline"] = { ADDED_8_0_1 },
+							["races"] = HORDE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28232, {	-- Food From Below [A]
+							["timeline"] = { ADDED_4_0_1 },
+							["races"] = ALLIANCE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28662, {	-- Learning From The Past [H]
+							["timeline"] = { ADDED_4_0_3 },
+							["races"] = HORDE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28120, {	-- Learning From The Past [A]
+							["timeline"] = { ADDED_4_0_1 },
+							["races"] = ALLIANCE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28188, {	-- Prison Revolt [A]
+							["timeline"] = { ADDED_4_0_1 },
+							["races"] = ALLIANCE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28668, {	-- Prison Revolt [H]
+							["timeline"] = { ADDED_4_0_3 },
+							["races"] = HORDE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28185, {	-- Svarnos [A]
+							["timeline"] = { ADDED_4_0_1 },
+							["races"] = ALLIANCE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28664, {	-- Svarnos [H]
+							["timeline"] = { ADDED_8_0_1 },
+							["races"] = HORDE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28658, {	-- Swamp Bait [H]
+							["timeline"] = { ADDED_8_0_1 },
+							["races"] = HORDE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28162, {	-- Swamp Bait [A]
+							["timeline"] = { ADDED_8_0_1 },
+							["races"] = ALLIANCE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28661, {	-- The Imprisoned Archmage [A]
+							["timeline"] = { ADDED_8_0_1 },
+							["races"] = HORDE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28118, {	-- The Imprisoned Archmage [H]
+							["timeline"] = { ADDED_4_0_1 },
+							["races"] = ALLIANCE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28163, {	-- The Leftovers [A]
+							["timeline"] = { ADDED_4_0_1 },
+							["races"] = ALLIANCE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28659, {	-- The Leftovers [H]
+							["timeline"] = { ADDED_4_0_3 },
+							["races"] = HORDE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28223, {	-- The Warden [A]
+							["timeline"] = { ADDED_4_0_1 },
+							["races"] = ALLIANCE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28669, {	-- The Warden [H]
+							["timeline"] = { ADDED_8_0_1 },
+							["races"] = HORDE_ONLY,
+							["isDaily"] = true,
+						}),
+						q(28882, {	-- Victory in Tol Barad [A]
+							["qg"] = 51288,	-- Major Marsden
+							["timeline"] = { ADDED_4_0_3 },
+							["races"] = ALLIANCE_ONLY,
+							["isWeekly"] = true,
+							["lvl"] = 90,
+						}),
+						q(28884, {	-- Victory in Tol Barad [H]
+							["qg"] = 51287,	-- Colonel Karzag
+							["timeline"] = { ADDED_4_0_3 },
+							["races"] = HORDE_ONLY,
+							["isWeekly"] = true,
+							["lvl"] = 90,
+						}),
+					})),
+					n(REWARDS, {
+						["groups"] = {
+							currency(391, {	-- Tol Barad Commendation
+								["description"] = "These are rewarded by completing Tol Barad daily quests.",
+							}),
+						},
+					}),
+				},
+			}),
+		},
+	}),
+})));
